@@ -9,7 +9,7 @@
     <string name="home_superuser_count">Superusers: %d</string>
     <string name="home_module_count">Modules: %d</string>
     <string name="home_unsupported">Unsupported</string>
-    <string name="home_unsupported_reason">No KernelSU driver detected on your kernel, wrong kernel?</string>
+    <string name="home_unsupported_reason">No KernelSU driver detected on your kernel, wrong kernel?.</string>
     <string name="home_kernel">Kernel</string>
     <string name="home_manager_version">Manager version</string>
     <string name="home_fingerprint">Fingerprint</string>
@@ -53,7 +53,7 @@
     <string name="home_learn_kernelsu_url">https://kernelsu.org/guide/what-is-kernelsu.html</string>
     <string name="home_click_to_learn_kernelsu">Learn how to install KernelSU and use modules</string>
     <string name="home_unofficial_title">Unofficial KernelSU Build</string>
-    <string name="home_unofficial_content">You are using KernelSU that's specific for MizProject's Kernel. These KSU Modifications mostly come from Rissu KernelSU. If you are not using a MizKernel, please instead use KernelSU based by Rissu, provided by the README.</string>
+    <string name="home_unofficial_content">You are using KernelSU that's specific for MizProject's Kernel, This KSU Modifications are mostly comes from Rissu KernelSU. If you are not using a MizKernel, please instead use KernelSU based by Rissu, provided by the README</string>
     <string name="home_support_title">Support Us</string>
     <string name="home_support_content">KernelSU is, and always will be, free, and open source. You can however show us that you care by making a donation.</string>
     <string name="about_source_code"><![CDATA[View source code at %1$s<br/>Join our %2$s channel]]></string>
@@ -71,9 +71,9 @@
     <string name="profile_selinux_context">SELinux context</string>
     <string name="profile_umount_modules">Umount modules</string>
     <string name="failed_to_update_app_profile">Failed to update App Profile for %s</string>
-    <string name="require_kernel_version" formatted="false">The current KernelSU version %d is too low for the manager to work properly. Please upgrade to version %d or higher!</string>
+    <string name="require_kernel_version">The current KernelSU version %d is too low for the manager to work properly. Please upgrade to version %d or higher!</string>
     <string name="settings_umount_modules_default">Umount modules by default</string>
-    <string name="settings_umount_modules_default_summary">The global default value for "Umount modules" in App Profile. If enabled, it will remove all module modifications to the system for apps that don\'t have a profile set.</string>
+    <string name="settings_umount_modules_default_summary">The global default value for \"Umount modules\" in App Profile. If enabled, it will remove all module modifications to the system for apps that don\'t have a profile set.</string>
     <string name="profile_umount_modules_summary">Enabling this option will allow KernelSU to restore any modified files by the modules for this app.</string>
     <string name="profile_selinux_domain">Domain</string>
     <string name="profile_selinux_rules">Rules</string>
@@ -130,7 +130,7 @@
     <string name="settings_restore_stock_image">Restore stock image</string>
     <string name="settings_uninstall_temporary_message">Temporarily uninstall KernelSU, restore to original state after next reboot.</string>
     <string name="settings_uninstall_permanent_message">Uninstalling KernelSU (Root and all modules) completely and permanently.</string>
-    <string name="settings_restore_stock_image_message">Restore the stock factory image (If a backup exists), usually used before OTA; if you need to uninstall KernelSU, please use "Uninstall permanently".</string>
+    <string name="settings_restore_stock_image_message">Restore the stock factory image (If a backup exists), usually used before OTA; if you need to uninstall KernelSU, please use \"Uninstall permanently\".</string>
     <string name="flashing">Flashing</string>
     <string name="flash_success">Flash success</string>
     <string name="flash_failed">Flash failed</string>
