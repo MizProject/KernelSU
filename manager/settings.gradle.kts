@@ -17,5 +17,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "KernelSU"
+rootProject.name = "KernelSU for MizProject"
 include(":app")
