@@ -8,6 +8,8 @@ A Kernel-based root solution for Android devices.
 > Official KernelSU support for Non-GKI kernels has been ended.
 >
 > This is unofficial forks, all rights reserved to [@tiann](https://github.com/tiann)
+>
+> This fork exists also for the Specific MizProject Needs. Please Advise to visit the home fork https://github.com/rsuntk/KernelSU or, visit the main repo https://github.com/tiann/KernelSU
 
 [![Latest release](https://img.shields.io/github/v/release/rsuntk/KernelSU?label=Release&logo=github)](https://github.com/tiann/KernelSU/releases/latest)
 [![Weblate](https://img.shields.io/badge/Localization-Weblate-teal?logo=weblate)](https://hosted.weblate.org/engage/kernelsu)
