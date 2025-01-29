@@ -9,17 +9,17 @@ A Kernel-based root solution for Android devices.
 >
 > This is unofficial forks, all rights reserved to [@tiann](https://github.com/tiann)
 >
-> This fork exists also for the Specific MizProject Needs. Please Advise to visit the home fork https://github.com/rsuntk/KernelSU or, visit the main repo https://github.com/tiann/KernelSU
+> This fork exists also for the Specific MizProject Needs. Please Advise to visit the home fork https://github.com/rsuntk/KernelSU since this fork fetches from @rsuntk's changes or, visit the main official repo https://github.com/tiann/KernelSU
 
 [![Latest release](https://img.shields.io/github/v/release/rsuntk/KernelSU?label=Release&logo=github)](https://github.com/tiann/KernelSU/releases/latest)
 [![Weblate](https://img.shields.io/badge/Localization-Weblate-teal?logo=weblate)](https://hosted.weblate.org/engage/kernelsu)
-[![Channel](https://img.shields.io/badge/Follow-Telegram-blue.svg?logo=telegram)](https://t.me/KernelSU)
+[![Official Channel](https://img.shields.io/badge/Follow-Official_KSU_Telegram-blue.svg?logo=telegram)](https://t.me/KernelSU)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-orange.svg?logo=gnu)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [![GitHub License](https://img.shields.io/github/license/tiann/KernelSU?logo=gnu)](/LICENSE)
 
 ## How to add
 ```
-curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh" | bash -s main
+curl -LSs "https://raw.githubusercontent.com/MizProject/KernelSU/main/kernel/setup.sh" | bash -s main
 ```
 
 ## Hook method
@@ -54,7 +54,7 @@ To help translate KernelSU or improve existing translations, please use [Weblate
 
 ## Discussion
 
-- Telegram: [@KernelSU](https://t.me/KernelSU)
+- Telegram: [@KernelSU](https://t.me/KernelSU) (Official)
 
 ## Security
 
