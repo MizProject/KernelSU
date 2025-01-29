@@ -9,7 +9,7 @@ A Kernel-based root solution for Android devices.
 >
 > This is unofficial forks, all rights reserved to [@tiann](https://github.com/tiann)
 >
-> This fork exists also for the Specific MizProject Needs.<br>
+> This fork exists **ONLY** for Specific MizProject Needs.<br>
 > Please Advise to visit the home fork https://github.com/rsuntk/KernelSU since this fork fetches from @rsuntk's changes or, visit the main official repo https://github.com/tiann/KernelSU
 
 [![Latest release](https://img.shields.io/github/v/release/rsuntk/KernelSU?label=Release&logo=github)](https://github.com/tiann/KernelSU/releases/latest)
