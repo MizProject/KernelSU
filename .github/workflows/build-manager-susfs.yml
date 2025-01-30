@@ -21,7 +21,7 @@ jobs:
         include:
           - target: aarch64-linux-android
             os: ubuntu-latest
-    uses: ./.github/workflows/ksud.yml
+    uses: ./.github/workflows/ksud-susfs.yml
     with:
       target: ${{ matrix.target }}
       os: ${{ matrix.os }}
