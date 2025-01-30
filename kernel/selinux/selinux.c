@@ -93,7 +93,7 @@ bool ksu_getenforce()
 	return true;
 #endif
 }
-}
+
 #if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 10, 0)) &&                         \
 	!defined(KSU_COMPAT_HAS_CURRENT_SID)
 /*
