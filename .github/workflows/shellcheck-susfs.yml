@@ -3,7 +3,7 @@ name: ShellCheck - SUSFS Branch
 on:
   push:
     branches:
-      - 'main'
+      - 'main_susfs'
     paths:
       - '.github/workflows/shellcheck.yml'
       - '**/*.sh'

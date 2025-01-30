@@ -3,7 +3,7 @@ name: Clippy check - SUSFS - Branch
 on:
   push:
     branches:
-      - main
+      - main_susfs
     paths:
       - '.github/workflows/clippy.yml'
       - 'userspace/ksud/**'

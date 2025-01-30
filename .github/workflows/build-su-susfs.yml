@@ -1,7 +1,7 @@
 name: Build SU - SUSFS Branch
 on:
   push:
-    branches: [ "main", "ci" ]
+    branches: [ "main_susfs", "ci" ]
     paths:
       - '.github/workflows/build-su.yml'
       - 'userspace/su/**'

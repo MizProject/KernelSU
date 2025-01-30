@@ -2,7 +2,7 @@ name: Build Manager - SUSFS Branch
 
 on:
   push:
-    branches: [ "main", "ci" ]
+    branches: [ "main_susfs", "ci" ]
     paths:
       - '.github/workflows/build-manager.yml'
       - 'manager/**'

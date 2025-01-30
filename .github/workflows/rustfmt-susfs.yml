@@ -3,7 +3,7 @@ name: Rustfmt check - SUSFS Branch
 on:
   push:
     branches:
-      - 'main'
+      - 'main_susfs'
     paths:
       - '.github/workflows/rustfmt.yml'
       - 'userspace/ksud/**'
