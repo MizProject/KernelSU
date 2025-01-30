@@ -1,5 +1,2 @@
 .idea
 .vscode
-*.patch
-kernel/*.orig
-kernel/selinux/*.orig
