@@ -102,6 +102,10 @@ ccflags-y += -DEXPECTED_HASH=\"$(KSU_EXPECTED_HASH)\"
 ccflags-y += -Wno-implicit-function-declaration -Wno-strict-prototypes -Wno-int-conversion -Wno-gcc-compat
 ccflags-y += -Wno-declaration-after-statement -Wno-unused-function
 
+
+
+# Keep a new line here!! Because someone may append config
+
 ifeq ($(shell test -e $(srctree)/fs/susfs.c; echo $$?),0)
 ifdef KSU_SUSFS
 ccflags-y += -DKSU_SUSFS
@@ -140,5 +144,3 @@ else
 $(info -- You have not integrate susfs in your kernel.)
 $(info -- Read: https://gitlab.com/simonpunk/susfs4ksu)
 endif
-
-# Keep a new line here!! Because someone may append config
