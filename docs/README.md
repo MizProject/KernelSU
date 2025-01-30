@@ -10,7 +10,9 @@ A Kernel-based root solution for Android devices.
 > This is unofficial forks, all rights reserved to [@tiann](https://github.com/tiann)
 >
 > This fork exists **ONLY** for Specific MizProject Needs.<br>
-> Please Advise to visit the home fork https://github.com/rsuntk/KernelSU since this fork mostly fetches from [@rsuntk](https://github.com/rsuntk)'s changes or, visit the main official repo https://github.com/tiann/KernelSU
+> Please Advise to visit the home fork https://github.com/rsuntk/KernelSU since this fork mostly fetches from [@rsuntk](https://github.com/rsuntk)'s changes or, visit the main official repo https://github.com/tiann/KernelSU<br>
+>
+>You are in a **branch** called: main_susfs
 
 [![Latest release](https://img.shields.io/github/v/release/rsuntk/KernelSU?label=Release&logo=github)](https://github.com/tiann/KernelSU/releases/latest)
 [![Weblate](https://img.shields.io/badge/Localization-Weblate-teal?logo=weblate)](https://hosted.weblate.org/engage/kernelsu)
