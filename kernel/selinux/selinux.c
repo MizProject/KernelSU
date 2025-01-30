@@ -7,7 +7,6 @@
 #endif
 
 #define KERNEL_SU_DOMAIN "u:r:su:s0"
-
 #ifdef CONFIG_KSU_SUSFS
 #define KERNEL_INIT_DOMAIN "u:r:init:s0"
 #define KERNEL_ZYGOTE_DOMAIN "u:r:zygote:s0"
@@ -15,6 +14,7 @@ u32 susfs_ksu_sid = 0;
 u32 susfs_init_sid = 0;
 u32 susfs_zygote_sid = 0;
 #endif
+
 
 static int transive_to_domain(const char *domain)
 {
@@ -93,7 +93,7 @@ bool ksu_getenforce()
 	return true;
 #endif
 }
-
+}
 #if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 10, 0)) &&                         \
 	!defined(KSU_COMPAT_HAS_CURRENT_SID)
 /*
@@ -215,6 +215,8 @@ bool susfs_is_current_init_domain(void) {
 	return unlikely(current_sid() == susfs_init_sid);
 }
 #endif
+
+
 
 #define DEVPTS_DOMAIN "u:object_r:ksu_file:s0"
 

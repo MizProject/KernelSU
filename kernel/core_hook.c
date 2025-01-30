@@ -809,6 +809,13 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 	return 0;
 }
 
+#ifndef CONFIG_KSU_SUSFS_SUS_MOUNT
+	// check old process's selinux context, if it is not zygote, ignore it!
+	// because some su apps may setuid to untrusted_app but they are in global mount namespace
+	// when we umount for such process, that is a disaster!
+	bool is_zygote_child = ksu_is_zygote(old->security);
+#endif
+
 static bool is_appuid(kuid_t uid)
 {
 #define PER_USER_RANGE 100000
@@ -949,12 +956,7 @@ out_ksu_try_umount:
 #endif
 	}
 
-#ifndef CONFIG_KSU_SUSFS_SUS_MOUNT
-	// check old process's selinux context, if it is not zygote, ignore it!
-	// because some su apps may setuid to untrusted_app but they are in global mount namespace
-	// when we umount for such process, that is a disaster!
-	bool is_zygote_child = ksu_is_zygote(old->security);
-#endif
+
 	if (!is_zygote_child) {
 		pr_info("handle umount ignore non zygote child: %d\n",
 			current->pid);
@@ -984,10 +986,12 @@ out_ksu_try_umount:
 #endif
 
 	// try umount /system/etc/hosts (hosts module)
-	try_umount("/system/etc/hosts", false, MNT_DETACH);
+	ksu_try_umount("/system/etc/hosts", false, MNT_DETACH);
 
 	return 0;
 }
+
+
 
 // Init functons
 #if 0

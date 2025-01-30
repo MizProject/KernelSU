@@ -20,6 +20,8 @@ bool ksu_is_zygote(void *cred);
 
 void ksu_apply_kernelsu_rules();
 
+bool susfs_is_sid_equal(void *sec, u32 sid2);
+
 #ifdef CONFIG_KSU_SUSFS_SUS_MOUNT
 bool susfs_is_sid_equal(void *sec, u32 sid2);
 u32 susfs_get_sid_from_name(const char *secctx_name);
@@ -31,6 +33,7 @@ bool susfs_is_current_ksu_domain(void);
 void susfs_set_init_sid(void);
 bool susfs_is_current_init_domain(void);
 #endif
+
 
 u32 ksu_get_devpts_sid();
 
