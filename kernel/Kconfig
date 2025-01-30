@@ -7,7 +7,7 @@ config KSU
 	  Enable kernel-level root privileges on Android System.
 	  To compile as a module, choose M here: the
 	  module will be called kernelsu.
-    Note that this kernelsu is made for MizProject's Kernel
+    Note that this kernelsu is made for MizProject Kernel
     visit KernelSU on rsuntk Github for the original source
 
 config KSU_DEBUG
