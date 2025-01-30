@@ -1,4 +1,4 @@
-name: Build SU
+name: Build SU - SUSFS Branch
 on:
   push:
     branches: [ "main", "ci" ]
