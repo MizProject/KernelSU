@@ -1,4 +1,4 @@
-name: Release - SUSFS Branch
+name: Release
 on:
   push:
     tags:

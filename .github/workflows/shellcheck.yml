@@ -1,4 +1,4 @@
-name: ShellCheck - SUSFS Branch
+name: ShellCheck
 
 on:
   push:

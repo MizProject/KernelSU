@@ -1,4 +1,4 @@
-name: Build ksud - SUSFS Branch
+name: Build ksud
 on:
   workflow_call:
     inputs:

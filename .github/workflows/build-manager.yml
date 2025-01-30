@@ -1,4 +1,4 @@
-name: Build Manager - SUSFS Branch
+name: Build Manager
 
 on:
   push:

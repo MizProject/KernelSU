@@ -1,4 +1,4 @@
-name: Clippy check - SUSFS - Branch
+name: Clippy check
 
 on:
   push:

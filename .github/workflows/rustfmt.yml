@@ -1,4 +1,4 @@
-name: Rustfmt check - SUSFS Branch
+name: Rustfmt check
 
 on:
   push:
