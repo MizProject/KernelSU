@@ -97,12 +97,12 @@ ifeq ($(shell grep "ssize_t kernel_write" $(srctree)/fs/read_write.c | grep -q "
 ccflags-y += -DKSU_KERNEL_WRITE
 endif
 
-ifndef KSU_EXPECTED_SIZE
-KSU_EXPECTED_SIZE := 0x033b
+ifndef KSU_EXPECTED_SIZE_MIZPROJECT
+KSU_EXPECTED_SIZE_MIZPROJECT := 0x2e8
 endif
 
-ifndef KSU_EXPECTED_HASH
-KSU_EXPECTED_HASH := c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6
+ifndef KSU_EXPECTED_HASH_MIZPROJECT
+KSU_EXPECTED_HASH_MIZPROJECT := 0b8dac23e9894830843a4ef749996bba3fd3b29c28828f110f1914f9b15a730b
 endif
 
 ifdef KSU_MANAGER_PACKAGE
@@ -110,14 +110,14 @@ ccflags-y += -DKSU_MANAGER_PACKAGE=\"$(KSU_MANAGER_PACKAGE)\"
 $(info -- KernelSU Manager package name: $(KSU_MANAGER_PACKAGE))
 endif
 
-$(info -- Official KernelSU Manager signature size: $(KSU_EXPECTED_SIZE))
-$(info -- Official KernelSU Manager signature hash: $(KSU_EXPECTED_HASH))
+$(info -- Official KernelSU Manager signature size: $(KSU_EXPECTED_SIZE_MIZPROJECT))
+$(info -- Official KernelSU Manager signature hash: $(KSU_EXPECTED_HASH_MIZPROJECT))
 $(info -- Supported Unofficial Manager: Mizumo_prjkt (Non-GKI)) 
 $(info -- WARNING !!!)
 $(info -- YOU ARE USING A KERNELSU VARIANT THAT HAS SUSFS PATCH APPLIED)
 
-ccflags-y += -DEXPECTED_SIZE=$(KSU_EXPECTED_SIZE)
-ccflags-y += -DEXPECTED_HASH=\"$(KSU_EXPECTED_HASH)\"
+ccflags-y += -DEXPECTED_SIZE=$(KSU_EXPECTED_SIZE_MIZPROJECT)
+ccflags-y += -DEXPECTED_HASH=\"$(KSU_EXPECTED_HASH_MIZPROJECT)\"
 
 ifneq ($(shell grep -Eq "^int path_umount" $(srctree)/fs/namespace.c; echo $$?),0)
 $(info -- KSU_SUSFS: adding function 'int path_umount(struct path *path, int flags);' to $(srctree)/fs/namespace.c)

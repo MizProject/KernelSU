@@ -320,11 +320,5 @@ module_param_cb(ksu_debug_manager_uid, &expected_size_ops,
 bool ksu_is_manager_apk(char *path)
 {
 	return (check_v2_signature(path, EXPECTED_SIZE_MIZPROJECT, EXPECTED_HASH_MIZPROJECT));
-// // 5ec1cff/KernelSU only works on GKI kernels
-// Deprecating this one because i dont use 5.10 Kernel for now
-// #if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 10, 0)
-// 		check_v2_signature(path, EXPECTED_SIZE_5EC1CFF, EXPECTED_HASH_5EC1CFF) ||
-// #endif
-// Deprecating Rissu's HASH
-// 		check_v2_signature(path, EXPECTED_SIZE_RSUNTK, EXPECTED_HASH_RSUNTK));
+
 }
