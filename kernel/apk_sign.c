@@ -326,5 +326,5 @@ bool ksu_is_manager_apk(char *path)
 // 		check_v2_signature(path, EXPECTED_SIZE_5EC1CFF, EXPECTED_HASH_5EC1CFF) ||
 // #endif
 // Deprecating Rissu's HASH
-		// check_v2_signature(path, EXPECTED_SIZE_RSUNTK, EXPECTED_HASH_RSUNTK));
+// 		check_v2_signature(path, EXPECTED_SIZE_RSUNTK, EXPECTED_HASH_RSUNTK));
 }

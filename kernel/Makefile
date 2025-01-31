@@ -112,7 +112,9 @@ endif
 
 $(info -- Official KernelSU Manager signature size: $(KSU_EXPECTED_SIZE))
 $(info -- Official KernelSU Manager signature hash: $(KSU_EXPECTED_HASH))
-$(info -- Supported Unofficial Manager: rsuntk+Mizumo_prjkt (Non-GKI), 5ec1cff (GKI)) 
+$(info -- Supported Unofficial Manager: Mizumo_prjkt (Non-GKI)) 
+$(info -- WARNING !!!)
+$(info -- YOU ARE USING A KERNELSU VARIANT THAT HAS SUSFS PATCH APPLIED)
 
 ccflags-y += -DEXPECTED_SIZE=$(KSU_EXPECTED_SIZE)
 ccflags-y += -DEXPECTED_HASH=\"$(KSU_EXPECTED_HASH)\"
