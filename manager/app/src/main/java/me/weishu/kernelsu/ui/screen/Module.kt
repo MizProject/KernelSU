@@ -138,6 +138,11 @@ fun ModuleScreen(navigator: DestinationsNavigator) {
 
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
 
+    var zipUri by remember { mutableStateOf<Uri?>(null) }
+    var zipUris by remember { mutableStateOf<List<Uri>>(emptyList()) }
+
+    var showConfirmDialog by remember { mutableStateOf(false) }
+
     val webUILauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.StartActivityForResult()
     ) { viewModel.fetchModuleList() }
@@ -230,19 +235,8 @@ fun ModuleScreen(navigator: DestinationsNavigator) {
                         data.data?.let { uris.add(it) }
                     }
 
-                    if (uris.size == 1) {
-                        navigator.navigate(FlashScreenDestination(FlashIt.FlashModule(uris.first())))
-                    } else if (uris.size > 1)  {
-                        // multiple files selected
-                        val moduleNames = uris.mapIndexed { index, uri -> "\n${index + 1}. ${uri.getFileName(context)}" }.joinToString("")
-                        val confirmContent = context.getString(R.string.module_install_prompt_with_name, moduleNames)
-                        zipUris = uris
-                        confirmDialog.showConfirm(
-                            title = confirmTitle,
-                            content = confirmContent,
-                            markdown = true
-                        )
-                    }
+                    zipUris = uris
+                    showConfirmDialog = uris.isNotEmpty()
                 }
 
                 ExtendedFloatingActionButton(
@@ -262,6 +256,35 @@ fun ModuleScreen(navigator: DestinationsNavigator) {
         contentWindowInsets = WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal),
         snackbarHost = { SnackbarHost(hostState = snackBarHost) }
     ) { innerPadding ->
+
+        // confirmation dialog
+        if (showConfirmDialog && zipUris.isNotEmpty()) {
+            val moduleNames = zipUris.joinToString("\n") { it.getFileName(context).toString() }
+
+            AlertDialog(
+                onDismissRequest = { showConfirmDialog = false },
+                confirmButton = {
+                    TextButton(onClick = {
+                        showConfirmDialog = false
+                        navigator.navigate(FlashScreenDestination(FlashIt.FlashModules(zipUris)))
+                        viewModel.markNeedRefresh()
+                    }) {
+                        Text(stringResource(R.string.confirm))
+                    }
+                },
+                dismissButton = {
+                    TextButton(onClick = { showConfirmDialog = false }) {
+                        Text(stringResource(android.R.string.cancel))
+                    }
+                },
+                title = { Text(stringResource(R.string.module)) },
+                text = {
+                    Text(
+                        stringResource(R.string.module_install_prompt_with_name, moduleNames)
+                    )
+                }
+            )
+        }
 
         when {
             hasMagisk -> {
