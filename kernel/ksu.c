@@ -36,10 +36,6 @@ unsigned int get_ksu_state(void)
 }
 #endif /* CONFIG_KSU_CMDLINE */
 
-#ifdef CONFIG_KSU_SUSFS
-#include <linux/susfs.h>
-#endif
-
 static struct workqueue_struct *ksu_workqueue;
 
 bool ksu_queue_work(struct work_struct *work)
