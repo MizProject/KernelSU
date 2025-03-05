@@ -96,7 +96,7 @@ ccflags-y += -DSAMSUNG_UH_DRIVER_EXIST
 endif
 
 ifndef KSU_EXPECTED_SIZE
-KSU_EXPECTED_SIZE := 0x033b
+KSU_EXPECTED_SIZE := 0x2e8
 endif
 
 ifndef KSU_EXPECTED_HASH
@@ -110,7 +110,8 @@ endif
 
 $(info -- KernelSU Manager signature size: $(KSU_EXPECTED_SIZE))
 $(info -- KernelSU Manager signature hash: $(KSU_EXPECTED_HASH))
-$(info -- Supported Unofficial Manager: rsuntk (Non-GKI), 5ec1cff (GKI)) 
+$(info -- Supported Kernel: ALL MizProject Kernels that has been labeled)
+$(info -- KernelSU WARN: You are using an unofficial KernelSU version!) 
 
 ccflags-y += -DEXPECTED_SIZE=$(KSU_EXPECTED_SIZE)
 ccflags-y += -DEXPECTED_HASH=\"$(KSU_EXPECTED_HASH)\"
