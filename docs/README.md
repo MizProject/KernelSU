@@ -12,7 +12,7 @@ A Kernel-based root solution for Android devices.
 > This fork exists **ONLY** for Specific MizProject Needs.<br>
 > Please Advise to visit the home fork https://github.com/rsuntk/KernelSU since this fork mostly fetches from [@rsuntk](https://github.com/rsuntk)'s changes or, visit the main official repo https://github.com/tiann/KernelSU<br>
 >
->You are in a **branch** called: main
+>You are in a **branch** called: main_susfs
 >
 > And yes this concept of this fork is broad similar to Manjaro's situation in the past /j
 
