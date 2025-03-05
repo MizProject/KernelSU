@@ -100,7 +100,7 @@ KSU_EXPECTED_SIZE_MIZPROJECT := 0x2e8
 endif
 
 ifndef KSU_EXPECTED_HASH_MIZPROJECT
-KSU_EXPECTED_HASH_MIZPROJECT := 0b8dac23e9894830843a4ef749996bba3fd3b29c28828f110f1914f9b15a730b
+KSU_EXPECTED_HASH_MIZPROJECT := 227293e1d61093c2ecb0d23f394c1c6fdbad3de89f13b1ee65b6b67e1a099477
 endif
 
 ifdef KSU_MANAGER_PACKAGE
@@ -110,7 +110,7 @@ endif
 
 $(info -- Official KernelSU Manager signature size: $(KSU_EXPECTED_SIZE_MIZPROJECT))
 $(info -- Official KernelSU Manager signature hash: $(KSU_EXPECTED_HASH_MIZPROJECT))
-$(info -- Supported Unofficial Manager: Mizumo_prjkt (Non-GKI)) 
+$(info -- Supported Unofficial Manager: Mizumo_prjkt (Non-GKI and GKI)) 
 $(info -- WARNING !!!)
 $(info -- YOU ARE USING A KERNELSU VARIANT THAT HAS SUSFS PATCH APPLIED)
 
