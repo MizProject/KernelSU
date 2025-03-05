@@ -1,4 +1,4 @@
-# KernelSU
+# KernelSU (for MizKernel)
 
 <img src="https://kernelsu.org/logo.png" style="width: 96px;" alt="logo">
 
@@ -12,10 +12,12 @@ A Kernel-based root solution for Android devices.
 > This fork exists **ONLY** for Specific MizProject Needs.<br>
 > Please Advise to visit the home fork https://github.com/rsuntk/KernelSU since this fork mostly fetches from [@rsuntk](https://github.com/rsuntk)'s changes or, visit the main official repo https://github.com/tiann/KernelSU<br>
 >
->You are in a **branch** called: main_susfs
+>You are in a **branch** called: main
+>
+> And yes this concept of this fork is broad similar to Manjaro's situation in the past /j
 
-[![Latest release](https://img.shields.io/github/v/release/rsuntk/KernelSU?label=Release&logo=github)](https://github.com/tiann/KernelSU/releases/latest)
-[![Weblate](https://img.shields.io/badge/Localization-Weblate-teal?logo=weblate)](https://hosted.weblate.org/engage/kernelsu)
+[![Latest release](https://img.shields.io/github/v/release/MizProject/KernelSU?label=Release&logo=github)](https://github.com/rsuntk/KernelSU/releases/latest)
+[![Weblate (tiann-KernelSU)](https://img.shields.io/badge/Localization_for_Tiann's_KernelSU-Weblate-teal?logo=weblate)](https://hosted.weblate.org/engage/kernelsu)
 [![Official Channel](https://img.shields.io/badge/Follow-Official_KSU_Telegram-blue.svg?logo=telegram)](https://t.me/KernelSU)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-orange.svg?logo=gnu)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [![GitHub License](https://img.shields.io/github/license/tiann/KernelSU?logo=gnu)](/LICENSE)
@@ -50,10 +52,6 @@ Currently, only `arm64-v8a` are supported.
 - [Installation Instruction](https://kernelsu.org/guide/installation.html)
 - [How to build?](https://kernelsu.org/guide/how-to-build.html)
 - [Official Website](https://kernelsu.org/)
-
-## Translation
-
-To help translate KernelSU or improve existing translations, please use [Weblate](https://hosted.weblate.org/engage/kernelsu/). PR of Manager's translation is no longer accepted, because it will conflict with Weblate.
 
 ## Discussion
 

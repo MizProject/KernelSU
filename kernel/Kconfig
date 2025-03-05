@@ -16,16 +16,16 @@ config KSU_DEBUG
 	  Enable KernelSU debug mode.
 
 config KSU_ALLOWLIST_WORKAROUND
-        bool "KernelSU Session Keyring Init workaround"
-        depends on KSU
-        default n
-        help
-          Enable session keyring init workaround for problematic devices.
-          Useful for situations where the SU allowlist is not kept after a reboot.
+    bool "KernelSU Session init keyring workaround"
+    depends on KSU
+    default n
+    help
+      Enable session keyring init workaround for problematic devices.
+      Useful for situations where the SU allowlist is not kept after a reboot.
 
 config KSU_CMDLINE
 	bool "Enable KernelSU cmdline"
-	depends on KSU
+	depends on KSU && KSU != m
 	default n
 	help
 	  Enable a cmdline called kernelsu.enabled
@@ -172,6 +172,6 @@ config KSU_SUSFS_OPEN_REDIRECT
       - Effective only on processes with uid < 2000.
       - Please be reminded that process with open access to the target and redirected path can be detected.
 
-endmenu
+
 
 endmenu
