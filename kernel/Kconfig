@@ -46,6 +46,7 @@ config KSU_MANUAL_HOOK
     
 
 menu "KernelSU - SUSFS"
+
 config KSU_SUSFS
     bool "KernelSU addon - SUSFS"
     depends on KSU
@@ -176,5 +177,5 @@ config KSU_SUSFS_OPEN_REDIRECT
       - Please be reminded that process with open access to the target and redirected path can be detected.
 
 
-
+endmenu
 endmenu
