@@ -54,6 +54,7 @@
 #define KSU_GET_CRED_RCU
 #endif
 
+
 #ifdef CONFIG_KSU_SUSFS
 bool susfs_is_allow_su(void)
 {
@@ -66,7 +67,9 @@ bool susfs_is_allow_su(void)
 
 extern u32 susfs_zygote_sid;
 extern bool susfs_is_mnt_devname_ksu(struct path *path);
-
+#ifdef CONFIG_KSU_SUSFS_ENABLE_LOG 
+extern bool susfs_is_log_enabled __read_mostly;
+#endif // #ifdef CONFIG_KSU_SUSFS_ENABLE_LOG
 #ifdef CONFIG_KSU_SUSFS_TRY_UMOUNT
 extern void susfs_run_try_umount_for_current_mnt_ns(void);
 #endif // #ifdef CONFIG_KSU_SUSFS_TRY_UMOUNT
