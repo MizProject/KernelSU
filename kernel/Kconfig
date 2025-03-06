@@ -42,6 +42,9 @@ config KSU_MANUAL_HOOK
 	  This function only available on GKI kernels, non-GKI are not
 	  affected.
 
+
+    
+
 menu "KernelSU - SUSFS"
 config KSU_SUSFS
     bool "KernelSU addon - SUSFS"
