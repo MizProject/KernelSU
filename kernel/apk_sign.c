@@ -319,7 +319,8 @@ module_param_cb(ksu_debug_manager_uid, &expected_size_ops,
 
 bool is_manager_apk(char *path)
 {
-	return (check_v2_signature(path, EXPECTED_SIZE, EXPECTED_HASH) ||
-// 5ec1cff/KernelSU only works on GKI kernels
+	// Rissu KSU and MizProject only allowed to be manager!
+	// Mostly have the same codebase but different objectives.
+	return (check_v2_signature(path, EXPECTED_SIZE_RSUNTK, EXPECTED_HASH_RSUNTK) ||
 	check_v2_signature(path, EXPECTED_SIZE_MIZPRJKT, EXPECTED_HASH_MIZPRJKT));
 }
